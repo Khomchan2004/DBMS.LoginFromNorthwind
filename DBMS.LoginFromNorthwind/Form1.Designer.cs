@@ -28,24 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button1 = new Button();
+            btnEmployee = new Button();
             button2 = new Button();
             button3 = new Button();
             button4 = new Button();
             btnLogin = new Button();
             btnLogout = new Button();
             groupBox1 = new GroupBox();
+            btnOrders = new Button();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
-            // button1
+            // btnEmployee
             // 
-            button1.Location = new Point(74, 31);
-            button1.Name = "button1";
-            button1.Size = new Size(211, 70);
-            button1.TabIndex = 0;
-            button1.Text = "Employees พนักงาน";
-            button1.UseVisualStyleBackColor = true;
+            btnEmployee.Location = new Point(74, 31);
+            btnEmployee.Name = "btnEmployee";
+            btnEmployee.Size = new Size(211, 70);
+            btnEmployee.TabIndex = 0;
+            btnEmployee.Text = "Employees พนักงาน";
+            btnEmployee.UseVisualStyleBackColor = true;
+            btnEmployee.Click += btnEmployee_Click;
             // 
             // button2
             // 
@@ -97,23 +99,34 @@
             // 
             // groupBox1
             // 
-            groupBox1.Controls.Add(button1);
+            groupBox1.Controls.Add(btnOrders);
+            groupBox1.Controls.Add(btnEmployee);
             groupBox1.Controls.Add(button2);
             groupBox1.Controls.Add(button4);
             groupBox1.Controls.Add(button3);
             groupBox1.Location = new Point(35, 104);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(345, 413);
+            groupBox1.Size = new Size(345, 508);
             groupBox1.TabIndex = 7;
             groupBox1.TabStop = false;
             groupBox1.Text = "groupBox1";
             groupBox1.Visible = false;
             // 
+            // btnOrders
+            // 
+            btnOrders.Location = new Point(74, 404);
+            btnOrders.Name = "btnOrders";
+            btnOrders.Size = new Size(211, 70);
+            btnOrders.TabIndex = 5;
+            btnOrders.Text = "orders";
+            btnOrders.UseVisualStyleBackColor = true;
+            btnOrders.Click += btnOrders_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(506, 561);
+            ClientSize = new Size(506, 664);
             Controls.Add(btnLogout);
             Controls.Add(btnLogin);
             Controls.Add(groupBox1);
@@ -125,12 +138,13 @@
 
         #endregion
 
-        private Button button1;
+        private Button btnEmployee;
         private Button button2;
         private Button button3;
         private Button button4;
         private Button btnLogin;
         private Button btnLogout;
         private GroupBox groupBox1;
+        private Button btnOrders;
     }
 }
